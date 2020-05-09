@@ -301,7 +301,9 @@ var player = {
     ai: {
         upgrades: [],
         aiPoints: 0,
-    }
+        aiUpgrades: [],
+        maxUps: 10,
+    },
 };
 
 
