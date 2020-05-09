@@ -297,8 +297,11 @@ var player = {
             eternity: true,
             tachyonParticles: true,
         }
+    },
+    ai: {
+        upgrades: [],
+        aiPoints: 0,
     }
-
 };
 
 
