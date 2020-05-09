@@ -109,6 +109,8 @@ if (player.infinitied > 0 && !player.challenges.includes("challenge1")) player.c
   if (player.timeDimension8 === undefined) player.timeDimension8 = {cost: new Decimal("1e3350"), amount: new Decimal(0), power: new Decimal(1), bought: 0 }
   if (player.why === undefined) player.why = 0
   if (player.options.animations === undefined) player.options.animations = {floatingText: true, bigCrunch: true, eternity: true, tachyonParticles: true}
+  if (player.ai === undefined) player.ai = {upgrades: [], aiPoints: 0, aiUpgrades: [], maxUps: 10,}
+  if (player.ai.upgrades === undefined) player.ai.upgrades = []; if (player.ai.aiPoints === undefined) player.ai.aipoints = 0; if (player.ai.aiUpgrades === undefined) player.aiUpgrades = []; if (player.ai.maxUps === undefined) player.ai.maxUps = 10;
   setTheme(player.options.theme);
 
   sliderText.textContent = "Update rate: " + player.options.updateRate + "ms";
@@ -791,6 +793,10 @@ function transformSaveToDecimal() {
   player.dilation.dilatedTime = new Decimal(player.dilation.dilatedTime)
   player.dilation.totalTachyonParticles = new Decimal(player.dilation.totalTachyonParticles)
   player.dilation.nextThreshold = new Decimal(player.dilation.nextThreshold)
+  for (var i=0; i<player.ai.aiUpgrades.length; i++) {
+    player.ai[0]=new Decimal(player.ai[0]);
+    if (player.ai[2]&&player.ai[3]) player.ai[4]=new Decimal(player.ai[4]);
+  }
 }
 
 
