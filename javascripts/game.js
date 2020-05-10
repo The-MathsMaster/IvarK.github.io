@@ -5690,6 +5690,18 @@ function showEternityTab(tabName, init) {
     resizeCanvas()
 }
 
+function showEntTab(tabName) {
+    var tabs = document.getElementsByClassName('enttab');
+    var tab;
+    for (var i = 0; i < tabs.length; i++) {
+        tab = tabs.item(i);
+        if (tab.id === tabName) {
+            tab.style.display = 'block';
+        } else {
+            tab.style.display = 'none';
+        }
+    }
+}
 function showAchTab(tabName) {
     //iterate over all elements in div_tab class. Hide everything that's not tabName and show tabName
     var tabs = document.getElementsByClassName('achtab');
@@ -5736,6 +5748,9 @@ function init() {
     document.getElementById("eternitystorebtn").onclick = function () {
         showTab('eternitystore')
     }
+    document.getElementById("entitybtn").onclick = function () {
+        showTab('entity')
+    }
     //show one tab during init or they'll all start hidden
     showTab('dimensions')
     showInfTab('preinf')
@@ -5743,6 +5758,7 @@ function init() {
     showDimTab('antimatterdimensions')
     showChallengesTab('challenges')
     showEternityTab('timestudies', true)
+    showEntTab('entityups')
     load_game();
     updateTickSpeed();
     updateAutobuyers();
