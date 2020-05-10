@@ -5758,7 +5758,7 @@ function init() {
     showDimTab('antimatterdimensions')
     showChallengesTab('challenges')
     showEternityTab('timestudies', true)
-    showEntTab('entityups')
+    showEntTab('entups')
     load_game();
     updateTickSpeed();
     updateAutobuyers();
