@@ -4686,6 +4686,7 @@ var replicantiTicks = 0
 
 
 function gameLoop(diff) {
+    if (player.dilation.studies.includes(6)) document.getElementById("entitybtn").style.display = "inline-block";
     var thisUpdate = new Date().getTime();
     if (thisUpdate - player.lastUpdate >= 21600000) giveAchievement("Don't you dare to sleep")
     if (typeof diff === 'undefined') var diff = Math.min(thisUpdate - player.lastUpdate, 21600000);
