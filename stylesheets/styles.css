@@ -1845,3 +1845,31 @@ screen and (max-width: 480px) {
     100% {transform:scale(1); filter:blur(0px)}
 }
 
+@keyframes stutterflash {
+    0% {visibility: visible; filter:invert(0%)}
+    2% {visibility: visible; filter:invert(100%)}
+    4% {visibility: hidden; filter:invert(0%)}
+    6% {visibility: visible; filter:invert(0%)}
+    8% {visibility: visible; filter:invert(0%)}
+    10% {visibility: visible; filter:invert(100%)}
+    12% {visibility: hidden; filter:invert(0%)}
+    14% {visibility: visible; filter:invert(0%)}
+    16% {visibility: visible; filter:invert(0%)}
+    18% {visibility: visible; filter:invert(100%)}
+    20% {visibility: hidden; filter:invert(0%)}
+    22% {visibility: visible; filter:invert(0%)}
+    24% {visibility: visible; filter:invert(0%)}
+    26% {visibility: visible; filter:invert(100%)}
+    28% {visibility: hidden; filter:invert(0%)}
+    30% {visibility: visible; filter:invert(0%)}
+    45% {visibility: visible; filter:invert(100%)}
+    55% {visibility: visible; filter:invert(0%)}
+    59% {visibility: none; filter:invert(0%)}
+    65% {visibility: visible; filter:invert(100%)}
+    80% {visibility: visible; filter:invert(0%)}
+    90% {visibility: visible; filter:invert(100%)}
+    92% {visibility: hidden; filter:invert(0%)}
+    94% {visibility: visible; filter:invert(0%)}
+    98% {visibility: visible; filter:invert(100%)}
+    99% {visibility: hidden; filter:invert(0%)}
+}
