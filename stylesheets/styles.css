@@ -1645,7 +1645,26 @@ br {
     position: relative;
 }
   
-
+.dombutton:hover {
+    background: #456 !important;
+    box-shadow: 0px 0px;
+}
+.dombutton.buy {
+    background: #223 !important;
+    box-shadow: inset 0px 0px 40px #112;
+    cursor: pointer;
+}
+.dombutton {
+    background: #889 !important;
+    font-family: Typewriter;
+    border: 2px solid #456;
+    border-radius: 4px;
+    height: 100px;
+    width: 200px;
+    box-shadow: inset 0px 0px 40px #334;
+    color: #dde;
+    transition: all 0.2s;
+}
 
 
 
