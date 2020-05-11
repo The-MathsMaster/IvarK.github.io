@@ -548,7 +548,7 @@ button {
 
 .entitybtn {
     color: #aaa;
-    background: #555;
+    background: #555 !important;
     border: 2px solid #aaa;
     font-weight: bold;
     border-radius: 4px;
@@ -558,7 +558,7 @@ button {
 
 .entitybtn:hover {
     color: #000;
-    background: #aaa;
+    background: #aaa !important;
 }
 
 .achievementhidden {
