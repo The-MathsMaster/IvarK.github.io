@@ -334,7 +334,7 @@
                     </table>
                 </div>
             </div>
-            <div  class="eternitytab" id="eternityupgrades">
+            <div class="eternitytab" id="eternityupgrades">
                 <br>
                 <table class="table" style="margin: 0 auto">
                     <tr>
@@ -581,10 +581,30 @@
                     <td id="idtabbtn"><button class="secondarytabbtn" onclick="showEntTab('aiups')">Generated Upgrades</button></td>
                     <td id="tdtabbtn"><button class="secondarytabbtn" onclick="showEntTab('entprestige')">Entity Prestige</button></td>
                 </tr>
-                <div id="entups" class="enttab"><span style="font-size: 50px">ENTITY UPGRADES (WORK IN PROGRESS)</span></div>
-                <div id="aiups" class="enttab"><span style="font-size: 50px">ENTITY AI UPGRADES (WORK IN PROGRESS)</span></div>
-                <div id="entprestige" class="enttab"><span style="font-size: 50px">ENTITY PRESTIGE (WORK IN PROGRESS)</span></div>
             </table>
+            <div id="entups" class="enttab">
+                <span>Obtain 100 σοφ</span>
+                <button class="dombutton" onclick="buyAiPt()">Requires: 1e100 EP and 1 TT</button>
+                <table class="table" align="center">
+                    <tr>
+                        <td><button class="dombutton">Yes</button></td>
+                        <td><button class="dombutton">Yes</button></td>
+                        <td><button class="dombutton">Yes</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="dombutton">Yes</button></td>
+                        <td><button class="dombutton">Yes</button></td>
+                        <td><button class="dombutton">Yes</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="dombutton">Yes</button></td>
+                        <td><button class="dombutton">Yes</button></td>
+                        <td><button class="dombutton">Yes</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="aiups" class="enttab"><span style="font-size: 50px">ENTITY AI UPGRADES (WORK IN PROGRESS)</span></div>
+            <div id="entprestige" class="enttab"><span style="font-size: 50px">ENTITY PRESTIGE (WORK IN PROGRESS)</span></div>
         </div>
         <div id="dimensions" class="tab">
             <table class="table" align="center" style="margin: auto" id="dimTabButtons">
@@ -599,7 +619,7 @@
                 <p></p>
                 <input id="confirmation" type="checkbox" style="width:20px; height: 18px; display: none" ach-tooltip="No confirmation when doing Dimensional Sacrifice" onchange="sacrificeConf()">
                 <button id="sacrifice" class="storebtn" style="font-size:12px; width: 320px; display: none" ach-tooltip="">Dimensional Sacrifice</button>
-                <button id="maxall" class="storebtn" style="font-size: 12px">Max all (M)</Button>
+                <button id="maxall" class="storebtn" style="font-size: 12px">Max all (M)</button>
                 <span id="chall2Pow"></span>
                 <span id="chall3Pow"></span>
                 <table class="table" >
