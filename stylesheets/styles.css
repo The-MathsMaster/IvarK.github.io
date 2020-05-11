@@ -1644,14 +1644,15 @@ br {
 .rel {
     position: relative;
 }
-  
+
+.dombutton.buy:hover {
+    background: #112 !important;
+}
 .dombutton:hover {
-    background: #456 !important;
-    box-shadow: 0px 0px;
+    background: #253a50 !important;
 }
 .dombutton.buy {
     background: #223 !important;
-    box-shadow: inset 0px 0px 40px #112;
     cursor: pointer;
 }
 .dombutton {
@@ -1661,10 +1662,15 @@ br {
     border-radius: 4px;
     height: 100px;
     width: 200px;
-    box-shadow: inset 0px 0px 40px #334;
+    box-shadow: inset 0px 0px 40px #456;
     color: #dde;
     transition: all 0.2s;
 }
+
+
+
+
+
 
 
 
