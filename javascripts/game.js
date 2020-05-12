@@ -341,6 +341,7 @@ var player = {
         quality: 1,
         algorithm: [],
     },
+    unlockedEntity: false
 };
 
 
@@ -4723,8 +4724,10 @@ var replicantiTicks = 0
 
 
 function gameLoop(diff) {
-    if (player.dilation.studies.includes(6)) document.getElementById("entitybtn").style.display = "inline-block";
     var thisUpdate = new Date().getTime();
+    if (player.dilation.studies.includes(6)) player.unlockedEntity = true;
+    if (player.unlockedEntity) document.getElementById("entitybtn").style.display = "inline-block";
+    document.getElementById("aiPointAmt").innerText = formatValue(player.notation, 3, 0);
     if (thisUpdate - player.lastUpdate >= 21600000) giveAchievement("Don't you dare to sleep")
     if (typeof diff === 'undefined') var diff = Math.min(thisUpdate - player.lastUpdate, 21600000);
     diff = diff / 100;
