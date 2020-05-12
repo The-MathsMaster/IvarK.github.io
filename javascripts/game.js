@@ -12,8 +12,41 @@ var painTimer = 0;
 var keySequence = 0;
 var failureCount = 0;
 var implosionCheck = 0;
-var TIER_NAMES = [ null, "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eight" ];
-var DISPLAY_NAMES = [ null, "First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth" ];
+var TIER_NAMES = [null, "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eight"];
+var DISPLAY_NAMES = [null, "First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth"];
+var UPGRADE_APPLY_COMMON = ["ND", "ID", "TD"];
+var UPGRADE_APPLY_UNCOMMON = ["EP", "IP", "DIMBOOST"];
+var UPGRADE_APPLY_RARE = ["GAL", "TIMESHARDCOSTSCAL", "BUYDIMMULT"];
+var UPGRADE_APPLY_VERYRARE = ["DIMCOSTSCAL", "GALCOSTSCAL", "INFPOWMULT"];
+var UPGRADE_APPLY_EXRARE = ["DT", "TP", "SAC"];
+var UNIVERSAL_APPLY = [UPGRADE_APPLY_EXRARE];
+var ix;
+for (ix = 0; ix < 16; ix++) {
+    UNIVERSAL_APPLY.push(UPGRADE_APPLY_COMMON);
+}
+for (ix = 0; ix < 8; ix++) {
+    UNIVERSAL_APPLY.push(UPGRADE_APPLY_UNCOMMON);
+}
+for (ix = 0; ix < 4; ix++) {
+    UNIVERSAL_APPLY.push(UPGRADE_APPLY_RARE);
+}
+for (ix = 0; ix < 2; ix++) {
+    UNIVERSAL_APPLY.push(UPGRADE_APPLY_VERYRARE);
+}
+var UPGRADE_REQ_COMMON = ["AM", "IP", "EP"];
+var UPGRADE_REQ_UNCOMMON = ["ETERNSTAT", "INFINITYSTAT", "TIME"];
+var UPGRADE_REQ_RARE = ["GAL", "DIMBOOST", "DT"]
+var UPGRADE_REQ_VERYRARE = ["TT", "TIMESHARDS", "INFPOW"];
+var UNIVERSAL_REQ = [UPGRADE_REQ_VERYRARE];
+for (ix = 0; ix < 8; ix++) {
+    UNIVERSAL_REG.push(UPGRADE_REQ_COMMON);
+}
+for (ix = 0; ix < 4; ix++) {
+    UNIVERSAL_REG.push(UPGRADE_REQ_UNCOMMON);
+}
+for (ix = 0; ix < 2; ix++) {
+    UNIVERSAL_REG.push(UPGRADE_REQ_RARE);
+}
 var forceHardReset = false;
 var player = {
     money: new Decimal(10),
@@ -301,8 +334,12 @@ var player = {
     ai: {
         upgrades: [],
         aiPoints: 0,
+        boughPoints: 0,
         aiUpgrades: [],
         maxUps: 10,
+        error: 0.5,
+        quality: 1,
+        algorithm: [],
     },
 };
 
