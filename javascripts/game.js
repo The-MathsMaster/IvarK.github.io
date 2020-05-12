@@ -39,13 +39,13 @@ var UPGRADE_REQ_RARE = ["GAL", "DIMBOOST", "DT"]
 var UPGRADE_REQ_VERYRARE = ["TT", "TIMESHARDS", "INFPOW"];
 var UNIVERSAL_REQ = [UPGRADE_REQ_VERYRARE];
 for (ix = 0; ix < 8; ix++) {
-    UNIVERSAL_REG.push(UPGRADE_REQ_COMMON);
+    UNIVERSAL_REQ.push(UPGRADE_REQ_COMMON);
 }
 for (ix = 0; ix < 4; ix++) {
-    UNIVERSAL_REG.push(UPGRADE_REQ_UNCOMMON);
+    UNIVERSAL_REQ.push(UPGRADE_REQ_UNCOMMON);
 }
 for (ix = 0; ix < 2; ix++) {
-    UNIVERSAL_REG.push(UPGRADE_REQ_RARE);
+    UNIVERSAL_REQ.push(UPGRADE_REQ_RARE);
 }
 var forceHardReset = false;
 var player = {
