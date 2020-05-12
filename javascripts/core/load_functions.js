@@ -16,7 +16,7 @@ function onLoad() {
   if (player.options.invert === true) player.options.theme = "Inverted"; player.options.invert = undefined;
   if (player.options.notation === undefined) player.options.notation = "Standard"
   if (player.options.challConf === undefined) player.options.challConf = false
-if (player.options.notation === undefined) player.options.notation = "Standard";
+  if (player.options.notation === undefined) player.options.notation = "Standard";
   if (player.options.newsHidden === undefined) player.options.newsHidden = false;
   if (player.options.sacrificeConfirmation === undefined) player.options.sacrificeConfirmation = true;
   if (player.options.retryChallenge === undefined) player.options.retryChallenge = false;
@@ -109,8 +109,9 @@ if (player.infinitied > 0 && !player.challenges.includes("challenge1")) player.c
   if (player.timeDimension8 === undefined) player.timeDimension8 = {cost: new Decimal("1e3350"), amount: new Decimal(0), power: new Decimal(1), bought: 0 }
   if (player.why === undefined) player.why = 0
   if (player.options.animations === undefined) player.options.animations = {floatingText: true, bigCrunch: true, eternity: true, tachyonParticles: true}
-  if (player.ai === undefined) player.ai = {upgrades: [], aiPoints: 0, aiUpgrades: [], maxUps: 10,}
+  if (player.ai === undefined) player.ai = {upgrades: [], aiPoints: 0, aiUpgrades: [], maxUps: 10, error: 0.5, quality: 1, algorithm: []}
   if (player.ai.upgrades === undefined) player.ai.upgrades = []; if (player.ai.aiPoints === undefined) player.ai.aipoints = 0; if (player.ai.aiUpgrades === undefined) player.aiUpgrades = []; if (player.ai.maxUps === undefined) player.ai.maxUps = 10;
+  if (player.ai.error === undefined) player.ai.error = 0.5; if (player.ai.quality === undefined) player.ai.quality = 1; if (player.ai.algorithm === undefined) player.ai.algorithm = [];
   setTheme(player.options.theme);
 
   sliderText.textContent = "Update rate: " + player.options.updateRate + "ms";
