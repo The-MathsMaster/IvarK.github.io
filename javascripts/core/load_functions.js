@@ -112,6 +112,7 @@ if (player.infinitied > 0 && !player.challenges.includes("challenge1")) player.c
   if (player.ai === undefined) player.ai = {upgrades: [], aiPoints: 0, boughPoints: 0, aiUpgrades: [], maxUps: 10, error: 0.5, quality: 1, algorithm: []}
   if (player.ai.upgrades === undefined) player.ai.upgrades = []; if (player.ai.aiPoints === undefined) player.ai.aipoints = 0; if (player.ai.boughPoints === undefined) player.ai.boughPoints = Math.max(0, player.ai.aiPoints); if (player.ai.aiUpgrades === undefined) player.aiUpgrades = []; if (player.ai.maxUps === undefined) player.ai.maxUps = 10;
   if (player.ai.error === undefined) player.ai.error = 0.5; if (player.ai.quality === undefined) player.ai.quality = 1; if (player.ai.algorithm === undefined) player.ai.algorithm = [];
+  if (player.unlockedEntity === undefined) player.unlockedEntity = false;
   setTheme(player.options.theme);
 
   sliderText.textContent = "Update rate: " + player.options.updateRate + "ms";
