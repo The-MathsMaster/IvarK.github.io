@@ -1773,7 +1773,9 @@ function galaxyReset() {
         dead: player.dead,
         dilation: player.dilation,
         why: player.why,
-        options: player.options
+        options: player.options,
+        ai: player.ai,
+        unlockedEntity: player.unlockedEntity
     };
 
     if (player.currentChallenge == "challenge10" || player.currentChallenge == "postc1") {
@@ -2999,7 +3001,9 @@ document.getElementById("bigcrunch").onclick = function () {
             dead: player.dead,
             dilation: player.dilation,
             why: player.why,
-            options: player.options
+            options: player.options,
+            ai: player.ai,
+            unlockedEntity: player.unlockedEntity
         };
 
         if (player.bestInfinityTime <= 0.01) giveAchievement("Less than or equal to 0.001");
@@ -3367,7 +3371,9 @@ function eternity(force, auto) {
                 rebuyables: player.dilation.rebuyables
             },
             why: player.why,
-            options: player.options
+            options: player.options,
+            ai: player.ai,
+            unlockedEntity: player.unlockedEntity
         };
         if (player.respec) respecTimeStudies()
         player.respec = false
