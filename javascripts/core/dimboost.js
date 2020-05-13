@@ -71,7 +71,7 @@ function softReset(bulk) {
       interval: null,
       lastUpdate: player.lastUpdate,
       achPow: player.achPow,
-    newsArray: player.newsArray,
+      newsArray: player.newsArray,
       autobuyers: player.autobuyers,
       costMultipliers: [new Decimal(1e3), new Decimal(1e4), new Decimal(1e5), new Decimal(1e6), new Decimal(1e8), new Decimal(1e10), new Decimal(1e12), new Decimal(1e15)],
       tickspeedMultiplier: new Decimal(10),
@@ -150,7 +150,9 @@ function softReset(bulk) {
       dead: player.dead,
       dilation: player.dilation,
       why: player.why,
-      options: player.options
+      options: player.options,
+      ai: player.ai,
+      unlockedEntity: player.unlockedEntity
   };
   if (player.currentChallenge == "challenge10" || player.currentChallenge == "postc1") {
       player.thirdCost = new Decimal(100)
