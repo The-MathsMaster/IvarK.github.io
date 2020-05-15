@@ -4732,7 +4732,7 @@ var replicantiTicks = 0
 function gameLoop(diff) {
     var thisUpdate = new Date().getTime();
     if (player.dilation.studies.includes(6)) player.unlockedEntity = true;
-    if (player.unlockedEntity) document.getElementById("entitybtn").style.display = "inline-block";
+    (player.unlockedEntity) ? document.getElementById("entitybtn").style.display = "inline-block" : document.getElementById("entitybtn").style.display = "none" ;
     document.getElementById("aiPointAmt").innerText = formatValue(player.options.notation, player.ai.aiPoints, 2, 0);
     document.getElementById("epReqAip").innerText = formatValue(player.options.notation, new Decimal("1e100").pow(player.ai.boughPoints/100+1), 0, 0);
     document.getElementById("ttReqAip").innerText = formatValue(player.options.notation, Math.pow(5, player.ai.boughPoints/100), 2, 0);
